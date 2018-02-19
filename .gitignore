@@ -1,0 +1,7 @@
+.vs/
+PCSharpBasics/obj/
+packages/
+PCSharpBasics/bin/
+UnitTestPCSharpBasics/bin/
+UnitTestPCSharpBasics/obj/
+*.pfx
