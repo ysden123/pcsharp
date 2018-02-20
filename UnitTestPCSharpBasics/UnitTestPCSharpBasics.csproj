@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ImplementationofI1Tests.cs" />
+    <Compile Include="Config\ConfigEx1Tests.cs" />
     <Compile Include="Formatting\Formatter1Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
