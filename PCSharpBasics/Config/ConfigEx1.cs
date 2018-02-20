@@ -13,5 +13,9 @@ namespace PCSharpBasics.Config
         {
             return ConfigurationManager.AppSettings.Get("setting1");
         }
+        public string DefineSetting2()
+        {
+            return ConfigurationManager.AppSettings["setting1"];
+        }
     }
 }

@@ -19,5 +19,14 @@ namespace PCSharpBasics.Config.Tests
             Assert.AreNotEqual(conf.DefineSetting1(), null);
             Assert.AreEqual<String>("value for setting1", conf.DefineSetting1());
         }
+
+        [TestMethod]
+        public void DefineSetting2Test()
+        {
+            var conf = new ConfigEx1();
+            var v = conf.DefineSetting2();
+            Assert.AreNotEqual(conf.DefineSetting1(), null);
+            Assert.AreEqual<String>("value for setting1", conf.DefineSetting1());
+        }
     }
 }
