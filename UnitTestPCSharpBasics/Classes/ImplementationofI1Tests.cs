@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PCSharpBasics.Classes;
+using StulSoft.PCSharpBasics.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCSharpBasics.Classes.Tests
+namespace StulSoft.PCSharpBasics.Classes.Tests
 {
     [TestClass()]
     public class ImplementationofI1Tests

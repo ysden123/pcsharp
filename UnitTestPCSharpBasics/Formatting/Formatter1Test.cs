@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PCSharpBasics.Formatting;
+using StulSoft.PCSharpBasics.Formatting;
 
-namespace UnitTestPCSharpBasics.Formatting
+namespace StulSoft.UnitTestPCSharpBasics.Formatting
 {
     [TestClass]
     public class Formatter1Test

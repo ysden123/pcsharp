@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PCSharpBasics.Config;
+using StulSoft.PCSharpBasics.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCSharpBasics.Config.Tests
+namespace StulSoft.PCSharpBasics.Config.Tests
 {
     [TestClass()]
     public class ConfigEx1Tests

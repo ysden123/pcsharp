@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCSharpBasics.Formatting
+namespace StulSoft.PCSharpBasics.Formatting
 {
     public class Formatter1
     {

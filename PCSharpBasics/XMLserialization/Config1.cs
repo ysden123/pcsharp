@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCSharpBasics.XMLserialization
+namespace StulSoft.PCSharpBasics.XMLserialization
 {
     /// <summary>
     /// Some configuration
