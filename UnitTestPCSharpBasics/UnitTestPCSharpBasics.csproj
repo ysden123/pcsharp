@@ -52,6 +52,7 @@
     <Compile Include="Config\ConfigEx1Tests.cs" />
     <Compile Include="Formatting\Formatter1Test.cs" />
     <Compile Include="Lambda\LambdaEx1Tests.cs" />
+    <Compile Include="MultiThreading\AsyncEx1Tests.cs" />
     <Compile Include="NameSpaces\NMSpaceTest1Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XMLserialization\XMLSrializer1Tests.cs" />

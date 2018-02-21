@@ -66,6 +66,7 @@
     <Compile Include="Config\ConfigEx1.cs" />
     <Compile Include="Formatting\Formatter1.cs" />
     <Compile Include="Lambda\LambdaEx1.cs" />
+    <Compile Include="MultiThreading\AsyncEx1.cs" />
     <Compile Include="NameSpaces\NMSpaceTest1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
