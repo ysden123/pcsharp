@@ -1,10 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StulSoft.PCSharp.JsonTest1;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StulSoft.PCSharp.JsonTest1.Tests
 {
@@ -15,11 +11,27 @@ namespace StulSoft.PCSharp.JsonTest1.Tests
         public void SerializeAndDeserializeTest()
         {
             var sd1 = new SomeData("test", 123, new List<string> { "one", "two" });
-            var json = Transformer.Serialize(sd1);
-            Console.WriteLine(json);
-            Assert.AreEqual<string>(@"{""Name"":""test"",""Age"":123,""Stages"":[""one"",""two""]}", json);
-            var sd2 = Transformer.Deserialize(json);
-            Assert.AreEqual(sd1, sd2);
+            var optionJson = Transformer.Serialize(sd1);
+            if (optionJson.HasValue)
+            {
+                var json = optionJson.ValueOr("");
+                Console.WriteLine(json);
+                Assert.AreEqual<string>(@"{""Name"":""test"",""Age"":123,""Stages"":[""one"",""two""]}", json);
+                var optionSd2 = Transformer.Deserialize(json);
+                if (optionSd2.HasValue)
+                {
+                    var sd2 = optionSd2.ValueOr(() => null);
+                    Assert.AreEqual(sd1, sd2);
+                }
+                else
+                {
+                    Assert.Fail("Deserialize failed");
+                }
+            }
+            else
+            {
+                Assert.Fail("Serialize failed");
+            }
         }
 
         [TestMethod]
@@ -27,8 +39,11 @@ namespace StulSoft.PCSharp.JsonTest1.Tests
         {
             // Missing age
             var badJson = @"{""Name"":""test"",""Stages"":[""one"",""two""]}";
-            var sd = Transformer.Deserialize(badJson);
-            Assert.AreEqual<SomeData>(null, sd);
+            var optionSd = Transformer.Deserialize(badJson);
+            if (optionSd.HasValue)
+            {
+                Assert.Fail("Deserialized with missed property");
+            }
         }
     }
 }

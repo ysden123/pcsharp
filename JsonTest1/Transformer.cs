@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using Optional;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,29 @@ namespace StulSoft.PCSharp.JsonTest1
 {
     public static class Transformer
     {
-        public static string Serialize(SomeData data)
-        {
-            return JsonConvert.SerializeObject(data);
-        }
-
-        public static SomeData Deserialize(string json)
+        public static Option<string> Serialize(SomeData data)
         {
             try
             {
-                return JsonConvert.DeserializeObject<SomeData>(json);
+                return Option.Some(JsonConvert.SerializeObject(data));
             }
-            catch(JsonSerializationException e)
+            catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                return null;
+                Console.WriteLine($"Failed serialization. Error: {e.Message}");
+                return Option.None<string>();
+            }
+        }
+
+        public static Option<SomeData> Deserialize(string json)
+        {
+            try
+            {
+                return Option.Some(JsonConvert.DeserializeObject<SomeData>(json));
+            }
+            catch (JsonSerializationException e)
+            {
+                Console.WriteLine($"Failed deserialization. Error: {e.Message}");
+                return Option.None<SomeData>();
             }
         }
     }
