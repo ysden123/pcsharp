@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,15 @@ namespace StulSoft.PCSharp.JsonTest1
 
         public static SomeData Deserialize(string json)
         {
-            return JsonConvert.DeserializeObject<SomeData>(json);
+            try
+            {
+                return JsonConvert.DeserializeObject<SomeData>(json);
+            }
+            catch(JsonSerializationException e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
     }
 }

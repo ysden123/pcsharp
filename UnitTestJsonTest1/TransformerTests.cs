@@ -21,5 +21,14 @@ namespace StulSoft.PCSharp.JsonTest1.Tests
             var sd2 = Transformer.Deserialize(json);
             Assert.AreEqual(sd1, sd2);
         }
+
+        [TestMethod]
+        public void SerializeDeserialize_WithFail_Test()
+        {
+            // Missing age
+            var badJson = @"{""Name"":""test"",""Stages"":[""one"",""two""]}";
+            var sd = Transformer.Deserialize(badJson);
+            Assert.AreEqual<SomeData>(null, sd);
+        }
     }
 }

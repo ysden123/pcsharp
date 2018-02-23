@@ -26,5 +26,13 @@ namespace StulSoft.PCSharp.JsonTest1.Tests
             //Console.WriteLine(str);
             Assert.AreEqual<string>("SomeData: Name: test, Age: 123, Stages: [one, two]", str);
         }
+
+        [TestMethod]
+        public void EqualsTest()
+        {
+            var sd1 = new SomeData("test", 123, new List<string> { "one", "two" });
+            var sd2 = new SomeData("test", 123, new List<string> { "one", "two" });
+            Assert.AreEqual<SomeData>(sd1, sd2);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,15 @@ namespace StulSoft.PCSharp.JsonTest1
     /// </summary>
     public class SomeData
     {
-        private IList<string> stages;
+        private IList<string> stages = new List<String>();
 
+        [JsonRequired]
         public string Name { get; set; }
+
+        [JsonRequired]
         public int Age { get; set; }
+
+        [JsonRequired]
         public IList<string> Stages
         {
             get
@@ -40,7 +46,7 @@ namespace StulSoft.PCSharp.JsonTest1
             return data != null &&
                    Name == data.Name &&
                    Age == data.Age &&
-                   EqualityComparer<IList<string>>.Default.Equals(Stages, data.Stages);
+                   Stages.SequenceEqual(data.Stages);
         }
 
         public override int GetHashCode()
