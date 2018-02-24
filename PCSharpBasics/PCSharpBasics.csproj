@@ -70,6 +70,7 @@
     <Compile Include="NameSpaces\NMSpaceTest1.cs" />
     <Compile Include="OutArgument\OutArgEx1.cs" />
     <Compile Include="PLinq\HelloLinq.cs" />
+    <Compile Include="PLinq\LinqEx1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
