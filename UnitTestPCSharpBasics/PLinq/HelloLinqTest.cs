@@ -8,10 +8,17 @@ namespace StulSoft.UnitTestPCSharpBasics.PLinq
     public class HelloLinqTest
     {
         [TestMethod]
-        public void TestGetGreetings()
+        public void TestGetGreetingsFromArray()
         {
-            var result = HelloLinq.GetGreetings();
+            var result = HelloLinq.GetGreetingsFromArray();
             Assert.IsTrue(result.Count == 1);
+        }
+
+        [TestMethod]
+        public void TestGetGreetingsFromList()
+        {
+            var result = HelloLinq.GetGreetingsFromList();
+            Assert.IsTrue(result.Count == 2);
         }
     }
 }
