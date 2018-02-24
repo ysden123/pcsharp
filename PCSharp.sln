@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonTest1", "JsonTest1\Json
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestJsonTest1", "UnitTestJsonTest1\UnitTestJsonTest1.csproj", "{A2C88FE0-E51D-46AF-890B-0BE9C77AB1B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestWithNUnit", "UnitTestWithNUnit\UnitTestWithNUnit.csproj", "{2C1A8673-3C54-4543-9700-691473671228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{A2C88FE0-E51D-46AF-890B-0BE9C77AB1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2C88FE0-E51D-46AF-890B-0BE9C77AB1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2C88FE0-E51D-46AF-890B-0BE9C77AB1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1A8673-3C54-4543-9700-691473671228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1A8673-3C54-4543-9700-691473671228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1A8673-3C54-4543-9700-691473671228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1A8673-3C54-4543-9700-691473671228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

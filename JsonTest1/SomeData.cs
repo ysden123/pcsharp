@@ -52,7 +52,10 @@ namespace StulSoft.PCSharp.JsonTest1
             var hashCode = 1246175516;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
             hashCode = hashCode * -1521134295 + Age.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<IList<string>>.Default.GetHashCode(Stages);
+            foreach (var stage in Stages)
+            {
+                hashCode = hashCode * -1521134295 + stage.GetHashCode();
+            }
             return hashCode;
         }
 
