@@ -54,6 +54,7 @@
     <Compile Include="Lambda\LambdaEx1Tests.cs" />
     <Compile Include="MultiThreading\AsyncEx1Tests.cs" />
     <Compile Include="NameSpaces\NMSpaceTest1Tests.cs" />
+    <Compile Include="OutArgument\OutArgEx1Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XMLserialization\XMLSrializer1Tests.cs" />
   </ItemGroup>
