@@ -7,4 +7,5 @@ Playing with C#
   - LoggingWithForm - using logging in Windows Form application
   - PCSharpBasics - c# basics
   - UnitTestJsonTest1 - unit tests for JsonTest1 project
-  - UnitTestPCSharpBasics - unit tests for PCSharpBasics project
+  - UnitTestPCSharpBasics - unit tests for PCSharpBasics project  
+  - UnitTestWithNUnit - use the NUnit for unit testing
