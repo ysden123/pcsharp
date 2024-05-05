@@ -64,6 +64,7 @@
     <Compile Include="Classes\ImplementationofI1.cs" />
     <Compile Include="Classes\Interface1.cs" />
     <Compile Include="Classes\ISimpleInterface.cs" />
+    <Compile Include="Classes\PlayingWithStruct.cs" />
     <Compile Include="Config\ConfigEx1.cs" />
     <Compile Include="Formatting\Formatter1.cs" />
     <Compile Include="Lambda\LambdaEx1.cs" />
